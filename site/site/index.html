@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-mobile.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Mineiríssima</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="menu">
+            <div class="logo">
+                <img src="./assets/letra-m.png" alt="" width="60">
+            </div>
+            <ul class="style-disabled menu-items">
+                <li><a href="#" class="style-disabled menu-item">Home</a></li>
+                <li><a href="#sobre" class="style-disabled menu-item">Sobre</a></li>
+                <li><a href="#cardapio" class="style-disabled menu-item">Cardápio</a></li>
+                <li><a href="#eventos" class="style-disabled menu-item">Eventos</a></li>
+                <li><a href="#contato" class="style-disabled menu-item">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>Mineiríssima</h1>
+            <p data-aos="fade-right" data-aos-duration="3000">O melhor da comida mineira!</p>
+            <a href="#sobre" class="button">Mais</a>
+        </section>
+    </main>
+
+    <!-- modal -->
+
+    <div id="dv-modal" class="modal">
+        <form action="https://web.telegram.org/k/#@mineirissima01_bot" class="estilo-form" target="_blank">
+            <h2>Para entrar em contato com nosso bot precisamos de algumas informações:</h2>
+            <input type="text" id="name" name="name" placeholder="Nome" required="required"><br>
+            <input type="email" id="email" name="pass" placeholder="Email" required="required"><br>
+            <input type="submit" value="Enviar" id="btn-salvar" onclick="adicina_usuario()">
+        </form>
+        <a href="#" onclick="closeModal()">Voltar</a>
+    </div>
+
+    <!-- modal-envio -->
+
+    <div id="dv-modal-sucesso" class="modal modal-sucesso estilo-form">
+        <P>Mensagem enviada com sucesso!</P>
+        <br>
+        <a href="#" onclick="closeModal_sucesso()">Voltar</a>
+    </div>
+
+    <!-- chatBot -->
+
+    <div class="chatbot" onclick="openModal()" data-aos="zoom-in-left" data-aos-duration="1000">
+        Chat
+    </div>
+
+    <!-- Sobre -->
+
+    <section id="sobre">
+        <h2 class="titulo-sobre">Sobre</h2>
+        <p>
+            <i>
+                "São três anos de história, mas com muitos anos de experiência na cozinha. Contamos
+                com a essencia de Minas em nossa cozinha, já que as comidas são preparadas por
+                verdadeiras mãos mineiras. É assim que levamos o gostinho da comida mineira para o mundo. Nascemos de
+                uma
+                ideia e viramos um negócio, levando consigo uma história de superação!
+                - Entre em contato para conhecer mais sobre nossa história!"
+            </i>
+        </p>
+    </section>
+
+    <!-- Cardapio -->
+
+    <section id="cardapio">
+
+        <h2 class="titulo-sections titulo-cardapio">Cardápio</h2>
+
+        <div class="cards">
+
+            <div class="card-container">
+                <h3>Especiarias</h3>
+                <div class="card card-pao-de-queijo"></div>
+            </div>
+
+            <div class="card-container">
+                <h3>Comidas tradicionais</h3>
+                <div class="card card-comida"></div>
+            </div>
+
+            <div class="card-container">
+                <h3>Doces</h3>
+                <div class="card card-doces"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Eventos -->
+
+    <section id="eventos">
+        <h2 class="titulo-sections titulo-evento">Eventos</h2>
+        <video width="50%" autoplay loop>
+            <source src="./assets/cozinha.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:20px;">
+            <i>Venha fazer um orçamento para seu evento! Mande um <a href="#contato">email</a> ou converse com nosso <a
+                onclick="openModal()">chatbot</a>.</i>
+        </p>
+    </section>
+
+    <!-- Contato -->
+
+    <section id="contato">
+        <h2 class="titulo-sections titulo-contato">Contato</h2>
+        <div class="container-contato ">
+
+            <form class="container-contato-item estilo-form" id="enviar-form-email">
+                <h2>Envie um Email</h2>
+                <input type="text" id="name_contact" name="name" placeholder="Nome" required="required"><br>
+                <input type="email" id="email_contact" name="email" placeholder="Email" required="required"><br>
+                <textarea name="mensagem" id="mensagem_contact" cols="24" rows="5" placeholder="Mensagem" required="required"></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+            <p>Ou</p>
+            <div class="container-contato-item bot-item">
+                <h2 onclick="openModal()">Converse com nosso chatbot 🤖</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer>
+        <p>Mineiríssima Copyright © 2022- All rights reserved</p>
+    </footer>
+
+</body>
+
+<!-- Firebase -->
+
+<script src="./app.js"></script>
+<script src="./script.js"></script>
+
+</html>

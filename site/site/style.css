@@ -1,0 +1,350 @@
+/* header */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* teste */
+    --title:#ffff;
+    --yellow:#ffd000;
+}
+
+
+body {
+    background-image: url('./assets/pasta-g9aeae1596_1920.jpg');
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+#menu>ul {
+    display: flex;
+    gap: 10px;
+}
+
+.style-disabled {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+/* home */
+
+.cheese-bread {
+    width: 100%;
+}
+
+/* main */
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 40vh;
+    font-size: 20px;
+    color: white;
+}
+
+.welcome>h1 {
+    font-size: 3rem;
+}
+
+.button {
+    border: 1px solid rgb(236, 221, 11);
+    margin-top: 50px;
+    padding: 5px 15px 5px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    margin: 1px solid black;
+}
+
+/* chatbot */
+
+.chatbot {
+
+    position: fixed;
+    border-radius: 100px;
+    background-color: var(--yellow);
+
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 0 20px;
+    margin: 10px;
+    box-shadow: 1px 1px 1px 1px white;
+}
+
+.chatbot:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px white;
+}
+
+/* sobre */
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    background-image: url('./assets/minas.jpg');
+    background-repeat: no-repeat;
+    backdrop-filter: 10px;
+    margin-top: 500px;
+    padding: 23vh 0 350px 0;
+    background-color: rgb(190, 148, 71);
+}
+
+/* card */
+
+.titulo-sections {
+    padding: 15vh 0 100px 0;
+    text-align: center;
+}
+
+.titulo-cardapio {
+    color: var(--title);
+    padding: 15vh 0 50px 0;
+    font-size: 30px;
+}
+
+.titulo-evento {
+    font-size: 30px;
+    padding: 10vh 0 10vh 0;
+    color: white;
+}
+
+.titulo-sobre {
+    color: var(--title);
+    font-size: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    margin: 10px;
+    text-align: center;
+    background-size: cover;
+}
+
+.card-comida {
+    background-image: url('./assets/comida.jpg');
+    background-size: cover;
+}
+
+.card-pao-de-queijo {
+    background-image: url('./assets/pao-de-queijo.jpg');
+    background-size: cover;
+}
+
+.card-doces {
+    background-image: url('./assets/doce.jpg');
+    background-size: cover;
+}
+
+.card-container > h3 {
+    text-align: center;
+    padding: 2px;
+    margin: 10px;
+    background-color: var(--yellow);
+    box-shadow: 1px 1px 1px 0px white;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#cardapio {
+    padding-bottom: 200px;
+    background-image: url('./assets/madeira.jpg');
+    background-size: cover;
+}
+
+.sobre-img {
+    opacity: 0.6;
+}
+
+#sobre>p {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--yellow);
+    padding: 50px;
+    box-shadow: 1px 1px 1px 0px white;
+}
+
+/* eventos */
+
+#eventos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-bottom: 100px;
+    background-color: #ffffff;
+    background-image: url('./assets/cracked-wood-with-a-dark-background.jpg');
+    background-size: cover;
+}
+
+#eventos > p, a {
+    padding: 5vh 0 3vh 0;
+    color: white;
+}
+
+#eventos > p > i > a {
+    color: var(--yellow);
+}
+
+#eventos > video {
+    box-shadow: 6px 6px 1px 1px var(--yellow);
+}
+
+/* contato */
+
+#mensagem_contact {
+    margin-top: 10px;
+    resize: none;
+    padding: 2px;
+}
+
+.bot-item:hover{
+    cursor: pointer;
+    color: #ffd000;
+}
+
+.titulo-contato {
+    font-size: 30px;
+}
+
+.container-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+    margin: 10px;
+
+    padding-bottom: 240px;
+}
+
+.estilo-form {
+    background-color: var(--yellow);
+    color: white;
+    padding: 100px;
+}
+
+.estilo-form > input {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+/* footer */
+
+footer{
+    background: var(--yellow);
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* modal */
+
+.modal > a {
+    text-decoration: none;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.modal-content {
+    margin: 0 auto;
+    margin-top: 3%;
+    max-width: 600px;
+    background-color: #eee;
+    padding: 0;
+    box-shadow: 0 0 2px #fff;
+}
+
+.dv-modal-sucesso {
+    margin: 0 auto;
+    margin-top: 3%;
+    max-width: 600px;
+    background-color: #eee;
+    padding: 0;
+    box-shadow: 0 0 2px #fff;
+}
+
+/* modal sucesso */
+
+#dv-modal-sucesso > p {
+    color: var(--yellow);
+}
+
+/* header mobile - responsive */
+
+@media screen and (max-width: 800px) {
+
+    .logo{
+        display: none;
+    }
+
+    #eventos {
+        padding-top: 100px;
+        padding-bottom: 300px;
+    }
+
+    #eventos > video {
+        width: 300px;
+    }
+
+    #eventos > p, a {
+        padding: 5vh 0 3vh 0;
+        color: white;
+        text-align: center;
+    }
+    
+}
